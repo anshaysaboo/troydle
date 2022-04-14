@@ -1,4 +1,5 @@
 import { Cell } from '../grid/Cell'
+import { useState } from 'react'
 import { BaseModal } from './BaseModal'
 
 type Props = {
@@ -7,6 +8,8 @@ type Props = {
 }
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
+  const [showExtra, setShowExtra] = useState(false)
+
   return (
     <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
@@ -58,7 +61,17 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
 
       <p className="mt-3">
-        <i>Fight on!</i>
+        <a
+          style={{ textDecoration: 'none' }}
+          href="#"
+          onClick={() => setShowExtra(!showExtra)}
+        >
+          <i>Fight on!</i>
+        </a>
+      </p>
+
+      <p hidden={!showExtra} className="mt-3">
+        Brought to you by Anshay Saboo, Sam Habibi, Arnav Bhau, and Rohit Rao.
       </p>
     </BaseModal>
   )

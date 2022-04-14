@@ -1,3 +1,4 @@
+import { getAnalytics, logEvent } from 'firebase/analytics'
 import { useState, useEffect } from 'react'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
@@ -144,6 +145,7 @@ function App() {
 
   useEffect(() => {
     if (isGameWon) {
+      logEvent(getAnalytics(), 'gameWon', { guesses: guesses.length })
       const winMessage =
         WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
       const delayMs = REVEAL_TIME_MS * MAX_WORD_LENGTH
@@ -155,6 +157,7 @@ function App() {
     }
 
     if (isGameLost) {
+      logEvent(getAnalytics(), 'gameLost')
       setTimeout(() => {
         setIsStatsModalOpen(true)
       }, GAME_LOST_INFO_DELAY)

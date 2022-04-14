@@ -4,11 +4,9 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { AlertProvider } from './context/AlertContext'
-import ReactGA from 'react-ga'
+import { configure } from './firebase-config'
 
-// Initialize Analytics
-ReactGA.initialize(String(process.env.REACT_APP_GOOGLE_MEASUREMENT_ID))
-ReactGA.pageview(window.location.pathname + window.location.search)
+configure()
 
 ReactDOM.render(
   <React.StrictMode>
