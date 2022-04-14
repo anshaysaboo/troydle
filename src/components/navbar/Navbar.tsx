@@ -1,9 +1,4 @@
-import {
-  ChartBarIcon,
-  CogIcon,
-  InformationCircleIcon,
-} from '@heroicons/react/outline'
-import { GAME_TITLE } from '../../constants/strings'
+import { ChartBarIcon, InformationCircleIcon } from '@heroicons/react/outline'
 
 type Props = {
   setIsInfoModalOpen: (value: boolean) => void
