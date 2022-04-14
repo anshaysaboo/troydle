@@ -20,9 +20,7 @@ export const Navbar = ({
           onClick={() => setIsInfoModalOpen(true)}
         />
         {/* <div className="bg-trojan-red p-1 rounded"> */}
-        <p className="text-xl mx-3 ml-3 font-bold text-trojan-yellow">
-          Troydle
-        </p>
+        <p className="text-xl ml-9 font-bold text-trojan-yellow">Troydle</p>
         {/* </div> */}
 
         <div className="right-icons">
