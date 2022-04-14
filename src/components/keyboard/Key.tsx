@@ -28,16 +28,16 @@ export const Key = ({
     'flex items-center justify-center rounded mx-0.5 text-xs font-bold cursor-pointer select-none dark:text-white',
     {
       'transition ease-in-out': isRevealing,
-      'bg-slate-200 dark:bg-slate-600 hover:bg-slate-300 active:bg-slate-400':
+      'bg-key-grey dark:bg-slate-600 hover:bg-key-grey active:bg-key-grey-pressed':
         !status,
-      'bg-slate-400 dark:bg-slate-800 text-white': status === 'absent',
+      'bg-light-grey dark:bg-slate-800 text-white': status === 'absent',
       'bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white':
         status === 'correct' && isHighContrast,
       'bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white':
         status === 'present' && isHighContrast,
-      'bg-green-500 hover:bg-green-600 active:bg-green-700 text-white':
+      'bg-trojan-green hover:bg-trojan-green active:bg-trojan-green text-white':
         status === 'correct' && !isHighContrast,
-      'bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-700 text-white':
+      'bg-trojan-yellow hover:bg-trojan-yellow active:bg-trojan-yellow text-white':
         status === 'present' && !isHighContrast,
     }
   )
