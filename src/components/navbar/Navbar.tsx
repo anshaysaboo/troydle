@@ -13,10 +13,10 @@ export const Navbar = ({
   setIsSettingsModalOpen,
 }: Props) => {
   return (
-    <div className="navbar bg-trojan-red dark:bg-transparent">
+    <div className="navbar bg-trojan-red">
       <div className="navbar-content px-5">
         <InformationCircleIcon
-          className="h-6 w-6 mr-2 cursor-pointer stroke-trojan-yellow dark:stroke-white"
+          className="h-6 w-6 mr-2 cursor-pointer stroke-trojan-yellow"
           onClick={() => setIsInfoModalOpen(true)}
         />
         {/* <div className="bg-trojan-red p-1 rounded"> */}
@@ -25,12 +25,12 @@ export const Navbar = ({
 
         <div className="right-icons">
           <ChartBarIcon
-            className="h-6 w-6 mr-3 cursor-pointer stroke-trojan-yellow dark:stroke-white"
+            className="h-6 w-6 mr-3 cursor-pointer stroke-trojan-yellow"
             onClick={() => setIsStatsModalOpen(true)}
           />
 
           <FaInstagram
-            className="h-6 w-6 mr-3 cursor-pointer text-trojan-yellow dark:text-white"
+            className="h-6 w-6 mr-3 cursor-pointer text-trojan-yellow"
             onClick={() => window.open('https://www.instagram.com/usctroydle/')}
           />
 
