@@ -1,5 +1,4 @@
 import { initializeApp } from 'firebase/app'
-import { getAnalytics } from 'firebase/analytics'
 
 export function configure() {
   const firebaseConfig = {
@@ -12,5 +11,5 @@ export function configure() {
     measurementId: 'G-VS1GWD574M',
   }
 
-  const app = initializeApp(firebaseConfig)
+  initializeApp(firebaseConfig)
 }

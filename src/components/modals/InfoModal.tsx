@@ -60,14 +60,14 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         The letter S is not in the word in any spot.
       </p>
 
-      <p className="mt-3">
-        <a
+      <p className="mt-3 text-black dark:text-white">
+        <button
           style={{ textDecoration: 'none' }}
-          href="#"
+          className="bg-transparent"
           onClick={() => setShowExtra(!showExtra)}
         >
           <i>Fight on!</i>
-        </a>
+        </button>
       </p>
 
       <p hidden={!showExtra} className="mt-3">
