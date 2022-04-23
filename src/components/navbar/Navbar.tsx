@@ -40,7 +40,6 @@ export const Navbar = ({
           />*/}
         </div>
       </div>
-      <hr></hr>
     </div>
   )
 }
